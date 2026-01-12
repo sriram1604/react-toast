@@ -98,8 +98,8 @@ Here's a basic example of how to use React Toast Popup:
 
 ```jsx
 import React from "react";
-import useNotification from "react-toast-popup";
-  
+import useNotification from "@sriramvenkatesan/react-toast-popup";
+
 function App() {
   const { NotificationComponent, triggerNotification } =
     useNotification("top-left");
