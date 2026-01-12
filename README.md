@@ -8,7 +8,7 @@ React Toast Popup is a simple and customizable toast notification component for 
 You can install React Toast Popup via npm:
 
 ```jsx
-npm install react-toast-popup
+npm install @sriramvenkatesan/react-toast-popup
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ To use React Toast Popup in your React application, follow these steps:
 Import the useNotification hook and necessary styles in your component:
 
 ```jsx
-import useNotification from "react-toast-popup";
+import useNotification from "@sriramvenkatesan/react-toast-popup";
 ```
 
 Initialize the useNotification hook with your preferred position:
@@ -99,7 +99,7 @@ Here's a basic example of how to use React Toast Popup:
 ```jsx
 import React from "react";
 import useNotification from "react-toast-popup";
-
+  
 function App() {
   const { NotificationComponent, triggerNotification } =
     useNotification("top-left");
