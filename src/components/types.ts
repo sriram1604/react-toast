@@ -12,8 +12,8 @@ export type PositionType =
   | "top-left"
   | "top-right";
 
-// Define the properties of a notification
-export interface NotificationProps {
+// Define the properties for triggering a notification
+export interface NotificationTriggerProps {
   type: "success" | "info" | "warning" | "error";
   message: string;
   duration: number;
@@ -23,5 +23,5 @@ export interface NotificationProps {
 // Define the return type of the hook
 export interface UseNotificationReturn {
   NotificationComponent: JSX.Element;
-  triggerNotification: (notificationProps: NotificationProps) => void;
+  triggerNotification: (notificationProps: NotificationTriggerProps) => void;
 }

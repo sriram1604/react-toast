@@ -3,6 +3,7 @@ import Notification from "../components/Notification";
 import { v4 as uuidv4 } from "uuid";
 import {
   NotificationProps,
+  NotificationTriggerProps,
   PositionType,
   UseNotificationReturn,
 } from "../components/types";
@@ -11,11 +12,11 @@ const useNotification = (
   position: PositionType = "bottom-right"
 ): UseNotificationReturn => {
   const [notifications, setNotifications] = useState<
-    (NotificationProps & { id: string })[]
+    (NotificationTriggerProps & { id: string })[]
   >([]);
 
   const triggerNotification = useCallback(
-    (notificationProps: NotificationProps) => {
+    (notificationProps: NotificationTriggerProps) => {
       const toastId = uuidv4();
       setNotifications((prevNotifications) => [
         ...prevNotifications,

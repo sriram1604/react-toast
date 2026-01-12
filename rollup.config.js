@@ -28,11 +28,20 @@ export default [
       peerDepsExternal(),
       resolve(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
+      typescript({
+        tsconfig: "./tsconfig.json",
+        jsx: "preserve"
+      }),
+
       terser(),
       postcss(),
     ],
-    external: ["react", "react-dom"],
+    external: [
+      "react",
+      "react-dom",
+      "react/jsx-runtime",
+      "react/jsx-dev-runtime",
+    ],
   },
   {
     input: "src/index.ts",
